@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5VS7WB7J');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connected501 delivers affordable connectivity, consulting, and technology solutions designed to help nonprofits stay connected, supported, and operational.">
+  <title>Connected501 &mdash; Experienced Consulting &amp; Smarter Technology Solutions for Nonprofits</title>
+
+  <link rel="stylesheet" href="https://use.typekit.net/ket6ihw.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="vendor/fontawesome/css/fa-minimal.css">
+  <link rel="stylesheet" href="styles.css?v=20260619">
+  <!-- reCAPTCHA v3 (added by mcs) — invisible bot/spam gate. Token fetched on form submit and verified
+       server-side (siteverify + score) by the shared giovatto-kore-submissions Lambda. -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6"></script>
+  <script>
+    window.KORE_RECAPTCHA_SITE_KEY = '6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
+    // Returns a Promise for a fresh per-submit token. Rejects if the reCAPTCHA script is unavailable; the
+    // submit handler treats a rejection as "no token" and lets the backend make the final call.
+    window.getKoreRecaptchaToken = function () {
+      return new Promise(function (resolve, reject) {
+        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') { reject(new Error('reCAPTCHA unavailable')); return; }
+        grecaptcha.ready(function () {
+          grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve, reject);
+        });
+      });
+    };
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VS7WB7J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__layout">
+
+      <div class="hero__media" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <a href="/" class="logo" aria-label="Connected501 &mdash; home">
+          <img src="src/C501_BLK_web.png" alt="Connected501" class="logo__img">
+        </a>
+
+        <span class="badge">EXCLUSIVE DISCOUNTS</span>
+
+        <h1 class="hero__headline">Experienced Consulting<br>&amp; Smarter Technology<br>Solutions for Nonprofits</h1>
+        <p class="hero__sub">Helping Mission-Driven Organizations Stay Connected, Supported &amp; Operational</p>
+
+        <div class="form-card">
+          <h2 class="form-card__title">Check Your Eligibility &mdash; It&rsquo;s Free</h2>
+          <form id="leadForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                <span class="form-error" role="alert">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                <span class="form-error" role="alert">Please enter your last name.</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address<span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="form-error" role="alert">Please enter a valid email address.</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" required>
+                <span class="form-error" role="alert">Please enter a valid phone number.</span>
+              </div>
+            </div>
+            <div class="form-row form-row--full">
+              <div class="form-group">
+                <label for="website">Company Website<span aria-hidden="true">*</span></label>
+                <input type="text" id="website" name="website" autocomplete="url" inputmode="url" required>
+                <span class="form-error" role="alert">Please enter your company website.</span>
+              </div>
+            </div>
+            <button type="submit" class="btn-cta"><i class="fa-regular fa-lock" aria-hidden="true"></i><span class="btn-label">See If My Organization Qualifies</span></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROMO BANNER
+  ══════════════════════════════════════════════════════════ -->
+  <section class="promo-banner" aria-label="Employee and Volunteer Cellphone Program">
+    <div class="container promo-banner__inner">
+      <div class="promo-badge">EMPLOYEE <br>&amp; VOLUNTEER <br>CELLPHONE <br>PROGRAM</div>
+      <div class="promo-text">
+        <small class="promo-label">You may qualify for exclusive discounts</small>
+        Technology Grant Procurement. <strong>You may qualify for exclusive discounts</strong> on smartphones, connectivity solutions, and technology services.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════════════ -->
+  <section class="about" aria-label="About Connected501">
+    <div class="container about__inner">
+
+      <div class="about__top">
+        <h2 class="about__heading">Connected501</h2>
+        <p class="about__desc">Delivers affordable connectivity, consulting, and technology solutions designed to help nonprofits simplify operations, support distributed teams, and stay connected, productive and focused on their mission.</p>
+      </div>
+
+      <div class="about__columns">
+        <div class="about__col">
+          <ul class="services-list">
+            <li>Discounted secure smartphones &amp; wearables for employees</li>
+            <li>5G Failover solutions &amp; nationwide custom IT installation</li>
+            <li>Centralized mobility management across multiple carriers &amp; vendors</li>
+            <li>Flexible financing &amp; scalable deployment solutions</li>
+          </ul>
+        </div>
+        <div class="about__col">
+          <ul class="services-list">
+            <li>Senior alert wearables, wellness tablets &amp; remote monitoring solutions</li>
+            <li>Rugged tablets &amp; laptops with built-in 5G connectivity for field teams</li>
+            <li>Flexible financing for hardware, mobility services &amp; project support</li>
+          </ul>
+        </div>
+        <div class="about__col">
+          <div class="about__footer">
+            <p class="about__website-label">Want to know more about us?</p>
+            <div class="contact-stack">
+              <a href="https://connected501.com/" class="contact-row" target="_blank" rel="noopener">
+                <span class="contact-icon" aria-hidden="true">
+                  <i class="fa-regular fa-globe"></i>
+                </span>
+                Connected501.com
+              </a>
+              <a href="mailto:sales@Connected501.com" class="contact-row">
+                <span class="contact-icon" aria-hidden="true">
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+                sales@Connected501.com
+              </a>
+              <a href="tel:6108351269" class="contact-row">
+                <span class="contact-icon" aria-hidden="true">
+                  <i class="fa-regular fa-phone"></i>
+                </span>
+                (610) 835-1269
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PARTNERS FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="partners" aria-label="Partner logos">
+    <div class="container partners__inner">
+      <img src="src/KORE_Logo.png" alt="KORE" class="partners__logo">
+      <img src="src/tmobile.png" alt="T-Mobile for Business &mdash; Registered Partner" class="partners__logo">
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FORM VALIDATION
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
+    var form = document.getElementById('leadForm');
+    if (!form) return;
+
+    function markError(input, msg) {
+      var grp = input.closest('.form-group');
+      var errEl = grp.querySelector('.form-error');
+      grp.classList.add('is-error');
+      if (msg) errEl.textContent = msg;
+    }
+    function clearError(input) {
+      input.closest('.form-group').classList.remove('is-error');
+    }
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+
+    var phoneInput = form.querySelector('input[type="tel"]');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '');
+      });
+    }
+
+    form.addEventListener('input', function (e) {
+      if (e.target.tagName === 'INPUT') clearError(e.target);
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var valid = true;
+      form.querySelectorAll('input[required]').forEach(function (input) {
+        var val = input.value.trim();
+        if (!val) { markError(input); valid = false; return; }
+        if (input.type === 'email' && !isValidEmail(val)) {
+          markError(input, 'Please enter a valid email address (must include @).');
+          valid = false; return;
+        }
+        clearError(input);
+      });
+      if (!valid) return;
+
+      // Post the lead to the shared Giovatto backend (routes by `source`).
+      // Field names are mapped to the backend schema (first_name/last_name/website).
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var submitLabel = submitBtn.querySelector('.btn-label') || submitBtn;
+      var origText = submitLabel.textContent;
+      var submitErr = document.getElementById('submitError');
+      if (!submitErr) {
+        submitErr = document.createElement('p');
+        submitErr.id = 'submitError';
+        submitErr.setAttribute('role', 'alert');
+        submitErr.style.cssText = 'display:none;color:#c0392b;margin-top:10px;';
+        submitBtn.insertAdjacentElement('afterend', submitErr);
+      }
+      submitErr.style.display = 'none';
+      submitBtn.disabled = true;
+      submitLabel.textContent = 'Submitting...';
+
+      var data = {
+        first_name: form.firstName.value.trim(),
+        last_name: form.lastName.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        website: form.website.value.trim(),
+        source: 'connected501',
+        ...(window.getKoreUtm ? window.getKoreUtm() : {})
+      };
+
+      try {
+        // reCAPTCHA v3 token (fail-open: if it can't be fetched, the backend decides).
+        try { data.recaptcha_token = await window.getKoreRecaptchaToken(); } catch (_) {}
+        var res = await fetch('https://or17ta3xjb.execute-api.us-east-1.amazonaws.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) {
+          var body = await res.json().catch(function () { return {}; });
+          throw new Error(body.error || 'Submission failed');
+        }
+        window.location.href = 'thank-you.html';
+      } catch (err) {
+        submitErr.textContent = err.message || 'Something went wrong. Please try again.';
+        submitErr.style.display = 'block';
+        submitBtn.disabled = false;
+        submitLabel.textContent = origText;
+      }
+    });
+  })();
+  </script>
+
+<script>
+  // UTM attribution capture (added by mcs). Persists utm_* from the landing URL for this session and
+  // exposes window.getKoreUtm() for the form submit. Distinct from the backend `source` (landing page).
+  (function () {
+    var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    window.getKoreUtm = function () {
+      try { return JSON.parse(sessionStorage.getItem('koreUtm') || '{}'); } catch (e) { return {}; }
+    };
+    try {
+      var qs = new URLSearchParams(window.location.search), out = window.getKoreUtm(), found = false;
+      KEYS.forEach(function (k) { var v = qs.get(k); if (v) { out[k] = v.slice(0, 256); found = true; } });
+      if (found) sessionStorage.setItem('koreUtm', JSON.stringify(out));
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>

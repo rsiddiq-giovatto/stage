@@ -1,0 +1,473 @@
+/* ============================================================
+   Connected501 — Landing Page Stylesheet
+   Based on Pegatron _template
+   ============================================================ */
+
+/* ============================================================
+   FONTS
+   ============================================================ */
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   BRAND COLORS
+   ============================================================ */
+:root {
+  /* Primary: deep navy blue */
+  --color-primary:        #1A51A0;
+  --color-primary-dark:   #12367A;
+
+  /* Secondary: CTA button — warm amber */
+  --color-secondary:      #F5A623;
+  --color-secondary-hover:#E09218;
+
+  /* Accent */
+  --color-accent:         #FFFFFF;
+}
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+:root {
+  --font: 'TeleNeo', 'Inter', sans-serif;
+
+  /* Dark surface */
+  --dark-bg:       #0C1522;
+  --form-card-bg:  #111927;
+  --input-bg:      #1B2A3B;
+  --input-border:  rgba(255, 255, 255, 0.10);
+
+  /* Light surface */
+  --white:         #FFFFFF;
+  --bg-light:      #F9FAFB;
+  --border-light:  #E2E8F0;
+
+  /* Text */
+  --text-dark:     #1A2332;
+  --text-body:     #4A5568;
+
+  /* Layout */
+  --container-max: 1280px;
+  --pad-x:         80px;
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.2; }
+p { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.logo { display: inline-block; margin-bottom: 14px; }
+.logo__img { height: 44px; width: auto; }
+
+/* ============================================================
+   BADGE (hero pill)
+   ============================================================ */
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+.form-card {
+  background: var(--form-card-bg);
+  border: 1px solid #516583;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 18px;
+}
+.form-card__title {
+  font-size: 18.5px;
+  font-weight: 600;
+  font-family: 'avenir-next', sans-serif;
+  color: var(--white);
+  margin-bottom: 22px;
+  line-height: 1.35;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.form-row--full { grid-template-columns: 1fr; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+.form-group input {
+  height: 42px;
+  padding: 0 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 15px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input::placeholder { color: rgba(255, 255, 255, 0.28); }
+.form-group input:focus { border-color: var(--color-primary); }
+.form-group.is-error input { border-color: #FF6B6B; }
+.form-error { font-size: 15px; color: #FF9A9A; display: none; line-height: 1.3; }
+.form-group.is-error .form-error { display: block; }
+
+/* ============================================================
+   CTA BUTTON
+   ============================================================ */
+.btn-cta {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 24px;
+  background: var(--color-secondary);
+  color: var(--text-dark);
+  font-size: 15.5px;
+  font-weight: 700;
+  font-family: 'avenir-next', sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-cta:hover { background: var(--color-secondary-hover); }
+.btn-cta:active { transform: scale(0.99); }
+.btn-cta i { margin-right: 8px; }
+
+/* ============================================================
+   CONTACT ROWS
+   ============================================================ */
+.contact-stack { display: flex; flex-direction: column; gap: 12px; }
+.contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.contact-row:hover { opacity: 0.72; }
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 13px;
+}
+.contact-row--light { color: rgba(255, 255, 255, 0.88); }
+.contact-icon--light {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255,255,255,0.4);
+  color: var(--white);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  background-color: var(--dark-bg);
+  background-image: url('src/Volunterr-image-full.jpg');
+  background-position: left top;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 14, 22, 0.04) 0%,
+    rgba(8, 14, 22, 0.12) 36%,
+    rgba(8, 14, 22, 0.88) 48%,
+    rgba(8, 14, 22, 0.97) 100%
+  );
+  pointer-events: none;
+}
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  min-height: 600px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hero__media { flex: 0 0 44%; position: relative; overflow: hidden; }
+.hero__content {
+  flex: 0 0 56%;
+  padding: 56px 72px 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.hero__headline {
+  font-size: 46px;
+  font-weight: 600;
+  font-family: 'avenir-next', sans-serif;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.hero__sub {
+  font-size: 16px;
+  color: var(--white);
+  margin-top: -4px;
+}
+
+/* ============================================================
+   PROMO BANNER
+   ============================================================ */
+.promo-banner {
+  background: #E8F0F6;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 2px solid #609CC7;
+}
+.promo-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.promo-badge {
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.25;
+}
+.promo-text {
+  font-size: 15.5px;
+  color: var(--text-dark);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.promo-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about { background: var(--white); padding: 64px 0 68px; }
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about__top { width: 70%; }
+.about__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.about__heading { font-size: 30px; font-weight: 600; font-family: 'avenir-next', sans-serif; color: var(--text-dark); margin-bottom: 14px; }
+.about__desc { font-size: 15px; color: var(--text-body); line-height: 1.72; }
+.services-list { display: flex; flex-direction: column; gap: 14px; }
+.services-list li {
+  font-size: 15px;
+  color: var(--text-dark);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.45;
+}
+.services-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 7px; height: 7px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.about__website-label{
+  margin-bottom: 10px;
+  font-family: 'Avenir Next', 'Inter';
+  font-size: 16px;
+}
+
+/* ============================================================
+   PARTNERS FOOTER
+   ============================================================ */
+.partners { background: #f2f2f2; border-top: 1px solid var(--border-light); padding: 28px 0; }
+.partners__inner { display: flex; align-items: center; justify-content: space-between; }
+.partners__logo { height: 44px; width: auto; object-fit: contain; }
+
+/* ============================================================
+   THANK YOU PAGE
+   ============================================================ */
+.thankyou-hero {
+  position: relative;
+  background-color: var(--dark-bg);
+  overflow: hidden;
+  min-height: 90vh;
+}
+.thankyou-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('src/Volunterr-image-full.jpg');
+  background-size: cover;
+  background-position: center top;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+.thankyou-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 14, 22, 0.92) 0%,
+    rgba(8, 14, 22, 0.90) 50%,
+    rgba(8, 14, 22, 0.22) 74%,
+    rgba(8, 14, 22, 0.04) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.thankyou-hero__layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  min-height: 90vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.thankyou-hero__content {
+  flex: 0 0 56%;
+  padding: 72px 48px 72px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.thankyou-hero__heading { font-size: 40px; font-weight: 400; font-family: 'avenir-next', sans-serif; color: var(--white); line-height: 1.22; }
+.thankyou-hero__heading strong { font-weight: 700; }
+.thankyou-hero__body { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.72; max-width: 480px; }
+.thankyou-hero__assist-label { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+.thankyou-hero__media { flex: 0 0 44%; position: relative; overflow: hidden; }
+
+/* ============================================================
+   RESPONSIVE — 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  :root { --pad-x: 20px; }
+
+  .hero__layout { flex-direction: column; min-height: auto; }
+  .hero__media { display: none; }
+  .hero__overlay { background: rgba(8, 14, 22, 0.80); }
+  .hero__content { flex: none; padding: 48px 20px; gap: 12px; }
+  .hero__headline { font-size: 32px; }
+  .hero__sub { font-size: 15px; }
+
+  .form-card { padding: 22px 18px 26px; margin-top: 12px; }
+  .form-card__title { font-size: 16px; margin-bottom: 18px; }
+  .form-row { grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+
+  .promo-banner__inner { flex-direction: column; align-items: flex-start; gap: 14px; padding-top: 20px; padding-bottom: 20px; }
+  .promo-badge { width: 100%; }
+  .promo-badge br { display: none; }
+  .promo-label { font-size: 15px; }
+
+  .about { padding: 48px 0 52px; }
+  .about__inner { gap: 28px; }
+  .about__top { width: 100%; }
+  .about__columns { grid-template-columns: 1fr; gap: 28px; }
+
+  .partners__inner { flex-direction: column; gap: 20px; justify-content: center; align-items: center; }
+
+  .thankyou-hero__layout { flex-direction: column; min-height: 90vh; justify-content: center; align-items: center; }
+  .thankyou-hero__overlay { background: rgba(8, 14, 22, 0.90); }
+  .thankyou-hero__media { display: none; }
+  .thankyou-hero__content { flex: none; padding: 48px 20px; gap: 16px; }
+  .thankyou-hero__heading { font-size: 28px; }
+  .thankyou-hero__body { max-width: 100%; }
+}
