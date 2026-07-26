@@ -1,0 +1,12 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && npm run copy-fa",
+    "copy-fa": "mkdir -p vendor/fontawesome/css vendor/fontawesome/webfonts && cp -r node_modules/@fortawesome/fontawesome-pro/css/. vendor/fontawesome/css/ && cp -r node_modules/@fortawesome/fontawesome-pro/webfonts/. vendor/fontawesome/webfonts/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^6"
+  }
+}
