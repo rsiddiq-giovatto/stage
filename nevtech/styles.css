@@ -1,0 +1,944 @@
+/* ============================================================
+   FONTS — TeleNeo (place .otf files in fonts/ folder)
+   Avenir Next — bundled in fonts/Avenir Next.ttc
+   Fallback: Inter loaded via Google Fonts in HTML
+   ============================================================ */
+
+/* TeleNeo */
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/Tele Neo.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/Tele Neo Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/Tele Neo Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/Tele Neo Extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Avenir Next */
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir-Next-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir-Next-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir-Next-DemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir-Next-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir-Next-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+:root {
+  --font: 'TeleNeo', 'Inter', sans-serif;
+
+  /* Brand colors */
+  --teal:          #0B7269;
+  --teal-dark:     #0D9488;
+  --gold:          #CAA72D;
+  --gold-hover:    #B08618;
+
+  /* Dark surface (hero / thank-you) */
+  --dark-bg:       #0C1522;
+  --form-card-bg:  #03110F;
+  --input-bg:      #1C2927;
+  --input-border:  #5F6B7D;
+
+  /* Light surface */
+  --white:         #FFFFFF;
+  --bg-light:      #F9FAFB;
+  --border-light:  #E2E8F0;
+
+  /* Text */
+  --text-dark:     #1A2332;
+  --text-body:     #4A5568;
+  --text-muted:    #718096;
+
+  /* Layout */
+  --container-max: 1280px;
+  --pad-x:         80px;
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.logo {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.logo__img {
+  height: 38px;
+  width: auto;
+}
+
+/* ============================================================
+   BADGE (hero pill)
+   ============================================================ */
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   TWO-OFFER CHOICE (hero)
+   ============================================================ */
+.offer-choice {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.offer-card {
+  flex: 1 1 0;
+  background: var(--form-card-bg);
+  border: 1px solid #226157;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.offer-card__eyebrow {
+  display: block;
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin-bottom: 6px;
+}
+
+.offer-card__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--white);
+}
+.offer-card__text strong { font-weight: 700; }
+
+.offer-choice__or {
+  align-self: center;
+  flex-shrink: 0;
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  opacity: 0.65;
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+.form-card {
+  background: var(--form-card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 18px;
+  border: solid 1px #226157;
+}
+
+.form-card__title {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 22px;
+  line-height: 1.35;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.form-row--full { grid-template-columns: 1fr; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+}
+
+.form-group input {
+  height: 42px;
+  padding: 0 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.form-group input:focus {
+  border-color: var(--teal);
+}
+
+.form-group.is-error input {
+  border-color: #FF6B6B;
+}
+
+.form-error {
+  font-size: 11.5px;
+  color: var(--white);
+  display: none;
+  line-height: 1.3;
+}
+
+.form-group.is-error .form-error {
+  display: block;
+}
+
+/* Persistent helper text under a field (does not disappear while typing) */
+.form-hint {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   CTA BUTTON
+   ============================================================ */
+.btn-cta {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 24px;
+  background: var(--gold);
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-cta:hover {
+  background: var(--gold-hover);
+}
+
+.btn-cta:active {
+  transform: scale(0.99);
+}
+.btn-cta i { margin-right: 8px; }
+
+/* ============================================================
+   CONTACT ROWS (about section + thank-you page)
+   ============================================================ */
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151;
+  font-family: var(--font);
+  font-size: 20px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.contact-row:hover {
+  opacity: 0.72;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: #F9FAFB;
+  border: 1px solid #14B8A6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14B8A6;
+  font-size: 13px;
+}
+
+/* Light variant — for dark backgrounds */
+.contact-row--light {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.contact-icon--light {
+  background: #D2D4D7;
+  border-color: #D2D4D7;
+  color: #096E75;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  position: relative;
+  background-color: var(--dark-bg);
+  background-image: url('src/Background-nevtech.png');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+/* Gradient: transparent left → dark right so text stays legible */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 14, 22, 0.04) 0%,
+    rgba(8, 14, 22, 0.12) 36%,
+    rgba(8, 14, 22, 0.78) 48%,
+    rgba(8, 14, 22, 0.90) 100%
+  );
+  pointer-events: none;
+}
+
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  min-height: 580px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Left column — decorative photo, hidden on mobile */
+.hero__media {
+  flex: 0 0 44%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__photo {
+  position: absolute;
+  bottom: 0;
+  left: -16px;
+  height: 106%;
+  width: calc(100% + 16px);
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Right column — logo, badge, headline, form */
+.hero__content {
+  flex: 0 0 56%;
+  margin-left: auto;
+  padding: 56px 72px 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hero__headline {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.hero__sub {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-top: -4px;
+}
+
+/* ============================================================
+   PROMO BANNER
+   ============================================================ */
+.promo-banner {
+  background: #F0FDFA;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid #14B8A6;
+}
+
+.promo-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.promo-badge {
+  flex-shrink: 0;
+  background: var(--teal);
+  color: var(--white);
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  padding: 0px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+}
+
+.promo-text {
+  font-size: 15.5px;
+  color: var(--text-dark);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.promo-text__title {
+  font-family: 'TeleNeo', 'Inter', 'Source Sans 3', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #0B0B0B;
+}
+
+.promo-label {
+  display: block;
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.promo-offers {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.promo-offers__item {
+  flex: 1 1 0;
+  margin: 0;
+  font-family: 'TeleNeo', 'Inter', 'Source Sans 3', sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #0B0B0B;
+}
+.promo-offers__item strong { font-weight: 700; color: var(--teal); }
+
+.promo-offers__or {
+  align-self: center;
+  flex-shrink: 0;
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about {
+  background: #F9FAFB;
+  padding: 64px 0 68px;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__intro {
+  width: 70%;
+}
+
+.about__heading {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+.about__desc {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.72;
+}
+
+.about__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.about__contact-title {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.services-list li {
+  font-size: 16px;
+  color: #374151;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.45;
+}
+
+.services-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+/* ============================================================
+   PROVEN RESULTS
+   ============================================================ */
+.results {
+  background: var(--white);
+  padding: 72px 0 80px;
+}
+
+.results__inner {
+  text-align: center;
+}
+
+.results__heading {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.results__sub {
+  font-family: var(--font);
+  font-size: 20px;
+  color: var(--text-body);
+  margin-bottom: 40px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: #F9FAFB;
+  border: 2px solid #14B8A6;
+  border-radius: 8px;
+  padding: 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-card__value {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.stat-card__label {
+  font-family: var(--font);
+  font-size: 16px;
+  color: #4F545E;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* ============================================================
+   PARTNERS FOOTER
+   ============================================================ */
+.partners {
+  background: #F2F2F2;
+  border-top: 1px solid var(--border-light);
+  padding: 28px 0;
+}
+
+.partners__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partners__logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.partners--left .partners__inner {
+  justify-content: space-between;
+  padding: 0 64px;
+  max-width: 100%;
+}
+
+/* ============================================================
+   THANK YOU PAGE
+   ============================================================ */
+.thankyou-hero {
+  overflow: hidden;
+}
+
+.thankyou-hero__layout {
+  display: flex;
+  align-items: stretch;
+  min-height: 90vh;
+}
+
+/* Right column — image */
+.thankyou-hero__media {
+  flex: 0 0 55%;
+  position: relative;
+  overflow: hidden;
+}
+
+.thankyou-hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.thankyou-hero__media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(31, 41, 55, 1) 0%,
+    rgba(31, 41, 55, 0.6) 25%,
+    rgba(31, 41, 55, 0.1) 55%,
+    rgba(31, 41, 55, 0) 100%
+  );
+  pointer-events: none;
+}
+
+/* Left column — content */
+.thankyou-hero__content {
+  flex: 0 0 45%;
+  background: #1F2937;
+  padding: 72px 80px 72px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+
+.thankyou-hero__heading {
+  font-family: 'Avenir', 'Inter', sans-serif;
+  font-size: 40px;
+  color: var(--white);
+  line-height: 1.22;
+}
+
+.thankyou-hero__heading--demibold {
+  font-weight: 600;
+}
+
+.thankyou-hero__heading--regular {
+  font-weight: 400;
+}
+
+.thankyou-hero__body {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.72;
+  max-width: 640px;
+}
+
+.thankyou-hero__assist-label {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+@media (min-width: 1210px) and (max-width: 1780px) {
+  .hero {
+    background-position: -145px top;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px BREAKPOINT
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 20px;
+  }
+
+  /* ── Hero ── */
+  .hero__layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero__media {
+    display: none;
+  }
+
+  .hero__content {
+    flex: none;
+    padding: 48px 20px 48px;
+    gap: 12px;
+  }
+
+  .hero__headline {
+    font-size: 32px;
+  }
+
+  .hero__sub {
+    font-size: 14px;
+  }
+
+  /* ── Two-offer choice ── */
+  .offer-choice {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .offer-choice__or { align-self: flex-start; }
+
+  /* ── Form card ── */
+  .form-card {
+    padding: 22px 18px 26px;
+    margin-top: 12px;
+  }
+
+  .form-card__title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* ── Promo banner ── */
+  .promo-banner__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .promo-offers {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .promo-offers__or { align-self: flex-start; }
+
+  /* ── About ── */
+  .about {
+    padding: 48px 0 52px;
+  }
+
+  .about__intro {
+    width: 100%;
+  }
+
+  .about__columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* ── Results ── */
+  .results {
+    padding: 48px 0 56px;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stats-row .stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* ── Partners ── */
+  .partners__inner {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ── Thank you ── */
+  .thankyou-hero__layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .thankyou-hero__media {
+    display: none;
+  }
+
+  .thankyou-hero__content {
+    flex: none;
+    min-height: 90vh;
+    padding: 48px 20px;
+    gap: 16px;
+  }
+
+  .thankyou-hero__heading {
+    font-size: 28px;
+  }
+
+  .thankyou-hero__body {
+    max-width: 100%;
+  }
+}
