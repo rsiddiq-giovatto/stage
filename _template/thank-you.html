@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <!-- REPLACE: page title -->
+  <title>Thank You | [BRAND NAME]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       THANK YOU HERO
+       Content LEFT · Decorative photo RIGHT
+       Background image set in styles.css → .thankyou-hero { background-image }
+  ══════════════════════════════════════════════════════════ -->
+  <section class="thankyou-hero">
+    <div class="thankyou-hero__overlay" aria-hidden="true"></div>
+    <div class="thankyou-hero__layout">
+
+      <div class="thankyou-hero__content">
+
+        <!-- REPLACE: logo -->
+        <a href="/" class="logo" aria-label="[BRAND NAME] &mdash; home">
+          <img src="src/logo.svg" alt="[BRAND NAME]" class="logo__img">
+        </a>
+
+        <div>
+          <!-- REPLACE: thank-you heading and body copy -->
+          <h1 class="thankyou-hero__heading">
+            Thank You!<br>
+            [CONFIRMATION SUBHEADING]
+          </h1>
+          <p class="thankyou-hero__body">
+            [CONFIRMATION BODY COPY &mdash; e.g. what happens next, when they'll be contacted]
+          </p>
+        </div>
+
+        <div>
+          <!-- REPLACE: contact label and details -->
+          <p class="thankyou-hero__assist-label">Need immediate assistance?</p>
+          <div class="contact-stack">
+            <a href="mailto:[EMAIL]" class="contact-row contact-row--light">
+              <span class="contact-icon contact-icon--light" aria-hidden="true">
+                <i class="fa-regular fa-envelope"></i>
+              </span>
+              [EMAIL]
+            </a>
+            <a href="tel:[PHONE]" class="contact-row contact-row--light">
+              <span class="contact-icon contact-icon--light" aria-hidden="true">
+                <i class="fa-regular fa-phone"></i>
+              </span>
+              [PHONE]
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Decorative photo &mdash; hidden on mobile. Remove if not needed. -->
+      <div class="thankyou-hero__media" aria-hidden="true">
+        <!-- REPLACE: thank-you page photo -->
+        <img src="src/thankyou-photo.png" alt="" class="thankyou-hero__photo">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PARTNERS / LOGO BAR
+       REPLACE: swap partner logo images in src/
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="partners" aria-label="Partner logos">
+    <div class="container partners__inner">
+      <img src="src/logo-partner-1.png" alt="[PARTNER 1]" class="partners__logo">
+      <img src="src/logo-partner-2.png" alt="[PARTNER 2]" class="partners__logo">
+    </div>
+  </footer>
+
+</body>
+</html>

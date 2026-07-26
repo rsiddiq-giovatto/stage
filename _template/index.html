@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- REPLACE: page title and meta description -->
+  <meta name="description" content="[META DESCRIPTION]">
+  <title>[PAGE TITLE]</title>
+
+  <!-- Google Fonts (Inter + Source Sans 3 as TeleNeo fallbacks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Pro &mdash; run `npm run setup` once to populate this folder -->
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- reCAPTCHA v3 (added by mcs) — invisible bot/spam gate. Token fetched on form submit and verified
+       server-side (siteverify + score) by the shared giovatto-kore-submissions Lambda.
+       REPLACE the site key below if this page uses a different reCAPTCHA key. -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6"></script>
+  <script>
+    window.KORE_RECAPTCHA_SITE_KEY = '6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
+    // Returns a Promise for a fresh per-submit token. Rejects if the reCAPTCHA script is unavailable; the
+    // submit handler treats a rejection as "no token" and lets the backend make the final call.
+    window.getKoreRecaptchaToken = function () {
+      return new Promise(function (resolve, reject) {
+        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') { reject(new Error('reCAPTCHA unavailable')); return; }
+        grecaptcha.ready(function () {
+          grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve, reject);
+        });
+      });
+    };
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+       Background image set in styles.css → .hero { background-image }
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__layout">
+
+      <!-- Decorative photo &mdash; hidden on mobile. Remove if not needed. -->
+      <div class="hero__media" aria-hidden="true">
+        <!-- REPLACE: hero photo (optional foreground image) -->
+        <img src="src/hero-photo.png" alt="" class="hero__photo">
+      </div>
+
+      <div class="hero__content">
+        <!-- REPLACE: logo -->
+        <a href="/" class="logo" aria-label="[BRAND NAME] &mdash; home">
+          <img src="src/logo.svg" alt="[BRAND NAME]" class="logo__img">
+        </a>
+
+        <!-- REPLACE: badge text. Remove section if not needed. -->
+        <span class="badge">[BADGE TEXT] &nbsp;·&nbsp; [OFFER]</span>
+
+        <!-- REPLACE: headline and subheadline -->
+        <h1 class="hero__headline">[HEADLINE]</h1>
+        <p class="hero__sub">[SUBHEADLINE]</p>
+
+        <!-- Form card -->
+        <div class="form-card">
+          <!-- REPLACE: form title -->
+          <h2 class="form-card__title">[FORM TITLE]</h2>
+          <form id="leadForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                <span class="form-error" role="alert">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                <span class="form-error" role="alert">Please enter your last name.</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address<span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="form-error" role="alert">Please enter a valid email address.</span>
+              </div>
+              <div class="form-group">
+                <!-- REPLACE: swap for Phone or Company Website as needed -->
+                <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" required>
+                <span class="form-error" role="alert">Please enter a valid phone number.</span>
+              </div>
+            </div>
+            <!-- REPLACE: CTA button label -->
+            <button type="submit" class="btn-cta">[CTA BUTTON TEXT]</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROMO BANNER
+       Remove this section if not needed.
+  ══════════════════════════════════════════════════════════ -->
+  <section class="promo-banner" aria-label="Promotional offer">
+    <div class="container promo-banner__inner">
+      <!-- REPLACE: badge label -->
+      <div class="promo-badge" aria-hidden="true">[BADGE]</div>
+      <div class="promo-text">
+        <!-- REPLACE: label and offer text -->
+        <small class="promo-label">[LABEL]</small>
+        [OFFER DESCRIPTION]
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════════════ -->
+  <section class="about" aria-label="About [BRAND NAME]">
+    <div class="container about__inner">
+
+      <div class="about__left">
+        <!-- REPLACE: company name, description, contact details -->
+        <h2 class="about__heading">[COMPANY NAME]</h2>
+        <p class="about__desc">[COMPANY DESCRIPTION]</p>
+
+        <div class="contact-stack">
+          <a href="mailto:[EMAIL]" class="contact-row">
+            <span class="contact-icon" aria-hidden="true">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+            [EMAIL]
+          </a>
+          <a href="tel:[PHONE]" class="contact-row">
+            <span class="contact-icon" aria-hidden="true">
+              <i class="fa-regular fa-phone"></i>
+            </span>
+            [PHONE]
+          </a>
+        </div>
+      </div>
+
+      <div class="about__right">
+        <!-- REPLACE: service/feature bullet points -->
+        <ul class="services-list">
+          <li>[SERVICE OR FEATURE 1]</li>
+          <li>[SERVICE OR FEATURE 2]</li>
+          <li>[SERVICE OR FEATURE 3]</li>
+          <li>[SERVICE OR FEATURE 4]</li>
+          <li>[SERVICE OR FEATURE 5]</li>
+          <li>[SERVICE OR FEATURE 6]</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROVEN RESULTS
+       Remove this section if not needed.
+  ══════════════════════════════════════════════════════════ -->
+  <section class="results" aria-label="Results">
+    <div class="container results__inner">
+      <!-- REPLACE: section heading and subtitle -->
+      <h2 class="results__heading">[SECTION HEADING]</h2>
+      <p class="results__sub">[SECTION SUBTITLE]</p>
+
+      <!-- REPLACE: stat values and labels. Add/remove .stat-card blocks as needed. -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-card__value">[VALUE]</span>
+          <span class="stat-card__label">[LABEL]</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">[VALUE]</span>
+          <span class="stat-card__label">[LABEL]</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">[VALUE]</span>
+          <span class="stat-card__label">[LABEL]</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">[VALUE]</span>
+          <span class="stat-card__label">[LABEL]</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">[VALUE]</span>
+          <span class="stat-card__label">[LABEL]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PARTNERS / LOGO BAR
+       REPLACE: swap partner logo images in src/
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="partners" aria-label="Partner logos">
+    <div class="container partners__inner">
+      <img src="src/logo-partner-1.png" alt="[PARTNER 1]" class="partners__logo">
+      <img src="src/logo-partner-2.png" alt="[PARTNER 2]" class="partners__logo">
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FORM VALIDATION &mdash; no changes needed unless fields change
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
+    var form = document.getElementById('leadForm');
+    if (!form) return;
+
+    function markError(input, msg) {
+      var grp = input.closest('.form-group');
+      var errEl = grp.querySelector('.form-error');
+      grp.classList.add('is-error');
+      if (msg) errEl.textContent = msg;
+    }
+    function clearError(input) {
+      input.closest('.form-group').classList.remove('is-error');
+    }
+    function isValidEmail(val) {
+      var i = val.indexOf('@');
+      return i > 0 && i < val.length - 1;
+    }
+
+    // Phone: digits, spaces, +, -, (, ) only
+    var phoneInput = form.querySelector('input[type="tel"]');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^\d\s\+\-\(\)]/g, '');
+      });
+    }
+
+    form.addEventListener('input', function (e) {
+      if (e.target.tagName === 'INPUT') clearError(e.target);
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var valid = true;
+      form.querySelectorAll('input[required]').forEach(function (input) {
+        var val = input.value.trim();
+        if (!val) { markError(input); valid = false; return; }
+        if (input.type === 'email' && !isValidEmail(val)) {
+          markError(input, 'Please enter a valid email address (must include @).');
+          valid = false; return;
+        }
+        clearError(input);
+      });
+      if (valid) window.location.href = 'thank-you.html';
+    });
+  })();
+  </script>
+
+</body>
+</html>
