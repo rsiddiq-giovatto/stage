@@ -1,0 +1,580 @@
+/* ============================================================
+   TEMPLATE — Landing Page Stylesheet
+   Duplicate this folder for each new project.
+   Only the BRAND COLORS block below needs updating per project.
+   ============================================================ */
+
+/* ============================================================
+   FONTS — TeleNeo (place .otf files in fonts/ folder)
+   Fallbacks: Inter & Source Sans 3 loaded via Google Fonts in HTML
+   ============================================================ */
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('fonts/Avenir Next.ttc') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('fonts/TeleNeo-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   BRAND COLORS — update these for each new project
+   ============================================================ */
+:root {
+  /* Primary: main brand color — badges, borders, bullets, stat values, teal elements */
+  --color-primary:        #39B54A;
+  --color-primary-dark:   #2A9040;
+
+  /* Secondary: CTA button */
+  --color-secondary:      #3ED87C;
+  --color-secondary-hover:#2DBF68;
+
+  /* Accent: use for highlights, hover states, or a third brand color */
+  --color-accent:         #FFFFFF;
+}
+
+/* ============================================================
+   VARIABLES — layout, surfaces, text (rarely need changing)
+   ============================================================ */
+:root {
+  --font: 'TeleNeo', 'Inter', 'Source Sans 3', sans-serif;
+
+  /* Dark surface (hero / thank-you) */
+  --dark-bg:       #19212F;
+  --form-card-bg:  #1D2646;
+  --input-bg:      #343C59;
+  --input-border:  #5F6B7D;
+
+  /* Light surface */
+  --white:         #FFFFFF;
+  --bg-light:      #F9FAFB;
+  --border-light:  #E2E8F0;
+
+  /* Text */
+  --text-dark:     #1A2332;
+  --text-body:     #4A5568;
+
+  /* Layout */
+  --container-max: 1280px;
+  --pad-x:         80px;
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.2; }
+p { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.logo { display: inline-block; margin-bottom: 14px; }
+.logo__img { height: 54px; width: auto; }
+
+/* ============================================================
+   BADGE (hero pill)
+   ============================================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  background: #54B57B;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+.form-card {
+  background: var(--form-card-bg);
+  border: 1px solid #858585;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 18px;
+}
+.form-card__title {
+  font-family: 'Avenir Next', 'Avenir', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 22px;
+  line-height: 1.35;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.form-row--full { grid-template-columns: 1fr; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+}
+.form-group input {
+  height: 42px;
+  padding: 0 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input::placeholder { color: rgba(255, 255, 255, 0.28); }
+.form-group input:focus { border-color: var(--color-primary); }
+.form-group.is-error input { border-color: #FF6B6B; }
+.form-error { font-size: 11.5px; color: var(--white); display: none; line-height: 1.3; }
+.form-group.is-error .form-error { display: block; }
+.form-hint { font-size: 11.5px; color: rgba(255, 255, 255, 0.55); line-height: 1.3; }
+
+/* ============================================================
+   CTA BUTTON
+   ============================================================ */
+.btn-cta {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 20px;
+  background: var(--color-secondary);
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Avenir Next', 'Avenir', sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-cta:hover { background: var(--color-secondary-hover); }
+.btn-cta:active { transform: scale(0.99); }
+.btn-cta i { margin-right: 8px; }
+
+/* ============================================================
+   CONTACT ROWS
+   ============================================================ */
+.contact-stack { display: flex; flex-direction: column; gap: 12px; }
+.contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.contact-row:hover { opacity: 0.72; }
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 13px;
+}
+.contact-row--light { color: rgba(255, 255, 255, 0.88); }
+.contact-icon--light {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  background-color: var(--dark-bg);
+  background-image: url('src/klutch-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 33, 47, 0.04) 0%,
+    rgba(25, 33, 47, 0.12) 36%,
+    rgba(25, 33, 47, 0.78) 48%,
+    rgba(25, 33, 47, 0.90) 100%
+  );
+  pointer-events: none;
+}
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: 580px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hero__media { flex: 0 0 44%; position: relative; overflow: hidden; }
+.hero__photo {
+  position: absolute;
+  bottom: 0; left: -16px;
+  height: 106%;
+  width: calc(100% + 16px);
+  object-fit: cover;
+  object-position: top center;
+}
+.hero__content {
+  flex: 0 0 56%;
+  padding: 56px 72px 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.hero__headline {
+  font-family: 'Avenir Next', 'Avenir', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+.hero__headline-em { font-style: normal; }
+.hero__sub {
+  font-family: 'TeleNeo', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: -4px;
+}
+
+/* ============================================================
+   PROMO BANNER
+   ============================================================ */
+.promo-banner {
+  background: #E3E5E9;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid #54B57B;
+}
+.promo-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.promo-badge {
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 800;
+  padding: 10px 22px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+}
+.promo-text {
+  font-size: 15.5px;
+  color: var(--text-dark);
+  line-height: 1.45;
+  font-weight: 500;
+}
+.promo-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about { background: var(--white); padding: 64px 0 68px; }
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 88px;
+  row-gap: 28px;
+  align-items: start;
+}
+.about__top        { grid-column: 1; grid-row: 1; }
+.about__bottom-left { grid-column: 1; grid-row: 2; }
+.about__right      { grid-column: 2; grid-row: 2; }
+.about__heading { font-family: 'Avenir Next', 'Avenir', sans-serif; font-size: 36px; font-weight: 400; color: var(--text-dark); margin-bottom: 14px; white-space: nowrap; }
+.about__desc { font-size: 14px; color: var(--text-body); line-height: 1.72; margin-bottom: 28px; }
+.services-list { display: flex; flex-direction: column; gap: 15px; padding-top: 52px; }
+.services-list li {
+  font-size: 14px;
+  color: var(--text-dark);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.45;
+}
+.services-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 7px; height: 7px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* ============================================================
+   PROVEN RESULTS
+   ============================================================ */
+.results { background: var(--bg-light); padding: 72px 0 80px; }
+.results__inner { text-align: center; }
+.results__heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.results__sub { font-size: 15px; color: var(--text-body); margin-bottom: 40px; }
+.stats-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.stat-card__value { font-size: 28px; font-weight: 800; color: var(--color-primary); line-height: 1.1; text-align: center; }
+.stat-card__label { font-size: 12px; color: var(--text-body); line-height: 1.35; text-align: center; }
+
+/* ============================================================
+   PARTNERS FOOTER
+   ============================================================ */
+.partners { background: #F2F2F2; border-top: 1px solid var(--border-light); padding: 28px 0; }
+.partners__inner { display: flex; align-items: center; justify-content: space-between; }
+.partners__logo { height: 40px; width: auto; object-fit: contain; }
+
+/* ============================================================
+   THANK YOU PAGE
+   ============================================================ */
+.thankyou-hero {
+  position: relative;
+  background-color: var(--dark-bg);
+  /* REPLACE: swap thank-you background image */
+  background-image: url('src/hero-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+}
+.thankyou-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 33, 47, 0.96) 0%,
+    rgba(25, 33, 47, 0.92) 40%,
+    rgba(25, 33, 47, 0.60) 60%,
+    rgba(25, 33, 47, 0.10) 80%,
+    rgba(25, 33, 47, 0.00) 100%
+  );
+  pointer-events: none;
+}
+.thankyou-hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  min-height: 90vh;
+}
+.thankyou-hero__content {
+  flex: 0 0 56%;
+  padding: 72px 48px 72px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.thankyou-hero__heading { font-size: 40px; font-weight: 800; color: var(--white); line-height: 1.22; }
+.thankyou-hero__subheading { font-weight: 400; }
+.thankyou-hero__body { font-size: 14.5px; color: rgba(255,255,255,0.82); line-height: 1.72; max-width: 480px; }
+.thankyou-hero__assist-label { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+.thankyou-hero__media {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.thankyou-hero__media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 33, 47, 1.00)  0%,
+    rgba(25, 33, 47, 0.70) 30%,
+    rgba(25, 33, 47, 0.20) 60%,
+    rgba(25, 33, 47, 0.00) 100%
+  );
+  pointer-events: none;
+}
+.thankyou-hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ============================================================
+   RESPONSIVE — 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  :root { --pad-x: 20px; }
+
+  .hero__layout { flex-direction: column; min-height: auto; }
+  .hero__media { display: none; }
+  .hero__content { flex: none; padding: 48px 20px; gap: 12px; background-color: rgba(31, 41, 55, 0.80); }
+  .hero__headline { font-size: 32px; }
+  .hero__sub { font-size: 14px; }
+
+  .form-card { padding: 22px 18px 26px; margin-top: 12px; }
+  .form-card__title { font-size: 16px; margin-bottom: 18px; }
+  .form-row { grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+
+  .promo-banner__inner { flex-direction: column; align-items: flex-start; gap: 14px; padding-top: 20px; padding-bottom: 20px; }
+
+  .about { padding: 48px 0 52px; }
+  .about__inner { grid-template-columns: 1fr; gap: 32px; }
+  .about__desc { margin-bottom: 8px; }
+  .about__top        { grid-column: 1 / -1; grid-row: 1; }
+  .about__bottom-left { grid-column: 1; grid-row: 2; }
+  .about__right      { grid-column: 1; grid-row: 3; }
+  .about__heading    { white-space: normal; font-size: 26px; }
+  .services-list { padding-top: 0; }
+
+  .results { padding: 48px 0 56px; }
+  .stats-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stats-row .stat-card:last-child { grid-column: 1 / -1; }
+
+  .partners__inner { flex-direction: column; gap: 20px; justify-content: center; align-items: center; }
+
+  .thankyou-hero__layout { flex-direction: column; min-height: auto; }
+  .thankyou-hero__media { display: none; }
+  .thankyou-hero__content { flex: none; padding: 48px 20px; gap: 16px; min-height: 90vh; }
+  .thankyou-hero__heading { font-size: 28px; }
+  .thankyou-hero__body { max-width: 100%; }
+}
+
+/* ============================================================
+   KLUTCH OVERRIDES
+   ============================================================ */
+
+/* CTA button — dark text on green */
+.btn-cta { color: #0D1928; }
+
+/* Services list — 2 columns */
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 32px;
+  padding-top: 0;
+}
+
+/* About right — heading above list */
+.about__right-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+/* Promo banner — price layout */
+.promo-price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.promo-price__starting { font-size: 14px; font-weight: 600; color: var(--text-body); letter-spacing: 0.04em; }
+.promo-price__amount { font-size: 48px; font-weight: 800; color: #378E55; line-height: 1; }
+.promo-price__amount span { font-size: 18px; font-weight: 600; }
+.promo-price__note { font-size: 14px; color: var(--text-body); }
+.promo-divider { width: 1px; background: var(--border-light); align-self: stretch; margin: 0 8px; }
+
+/* Want to know more */
+.about__website-label { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 14px; }
+
+@media (max-width: 768px) {
+  .services-list { grid-template-columns: 1fr; }
+  .promo-banner__inner { flex-wrap: wrap; }
+  .promo-divider { display: none; }
+}
