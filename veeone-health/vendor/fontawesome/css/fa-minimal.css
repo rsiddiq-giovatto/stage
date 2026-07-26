@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2");
+}
+.fa-regular { font-family: "Font Awesome 6 Pro"; font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased; }
+.fa-globe::before    { content: "\f0ac"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-phone::before    { content: "\f095"; }
+.fa-lock::before     { content: "\f023"; }
+.fa-file-pdf::before { content: "\f1c1"; }

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-57TVM77R');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Telemedicine software for doctors and providers. Deliver secure, scalable virtual care with VeeOne Health's interoperable telehealth platform.">
+  <title>Telemedicine Software for Doctors and Providers | VeeOne Health</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ket6ihw.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/fa-minimal.css?v=20260623">
+  <link rel="stylesheet" href="styles.css?v=20260726b">
+  <!-- reCAPTCHA v3 (added by mcs) — invisible bot/spam gate. Token fetched on form submit and verified
+       server-side (siteverify + score) by the shared giovatto-kore-submissions Lambda. -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6"></script>
+  <script>
+    window.KORE_RECAPTCHA_SITE_KEY = '6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
+    // Returns a Promise for a fresh per-submit token. Rejects if the reCAPTCHA script is unavailable; the
+    // submit handler treats a rejection as "no token" and lets the backend make the final call.
+    window.getKoreRecaptchaToken = function () {
+      return new Promise(function (resolve, reject) {
+        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') { reject(new Error('reCAPTCHA unavailable')); return; }
+        grecaptcha.ready(function () {
+          grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve, reject);
+        });
+      });
+    };
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TVM77R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="brand" aria-label="VeeOne Health home">
+        <img src="src/VeeOne-Health-Logo_reversed_web.png" alt="VeeOne Health">
+      </a>
+      <a href="#leadForm" class="header-cta">Schedule a Demo</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Virtual care built for modern healthcare</span>
+          <h1 id="hero-title">Telemedicine Software for Doctors and Providers</h1>
+          <p class="hero__lead">Deliver secure, scalable virtual care with a flexible platform designed for hospitals, clinics, physician groups, and care teams.</p>
+          <div class="hero__proof">
+            <div><strong>HIPAA-compliant</strong><span>Secure video, audio and chat</span></div>
+            <div><strong>Hardware agnostic</strong><span>Works with existing devices</span></div>
+            <div><strong>Interoperable</strong><span>EMR/EHR and PACS integration</span></div>
+          </div>
+        </div>
+
+        <div class="form-card" id="demo-form">
+          <div class="form-card__head">
+            <span class="form-card__kicker">Free platform walkthrough</span>
+            <h2 class="form-card__title">Schedule a Platform Demo for Our Telehealth Software</h2>
+            <p>See how VeeOne Health can support your clinical workflows, patient access, and virtual care growth.</p>
+          </div>
+          <form id="leadForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="First name" required>
+                <span class="form-error" role="alert">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Last name" required>
+                <span class="form-error" role="alert">Please enter your last name.</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address<span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+                <span class="form-error" role="alert">Please enter a valid email address.</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="(555) 000-0000" required>
+                <span class="form-error" role="alert">Please enter a valid phone number.</span>
+              </div>
+            </div>
+            <div class="form-row form-row--full">
+              <div class="form-group">
+                <label for="website">Company Website<span aria-hidden="true">*</span></label>
+                <input type="url" id="website" name="website" autocomplete="url" placeholder="https://example.com" required>
+                <span class="form-error" role="alert">Please enter a valid URL (e.g. https://example.com).</span>
+              </div>
+            </div>
+            <button type="submit" class="btn-cta"><i class="fa-regular fa-lock"></i>Schedule Demo</button>
+            <img src="src/hipaa-compliant.png" alt="HIPAA Compliant" class="hipaa-seal" width="180">
+          </form>
+          <p class="cta-subheading">See the ROI for your Patient Population</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trusted by healthcare organizations">
+      <div class="container">
+        <p class="section-kicker center">Trusted by healthcare organizations</p>
+        <div class="logo-cloud logo-cloud--images">
+          <img src="src/logo-banner-health.png" alt="Banner Health">
+          <img src="src/logo-multicare.png" alt="MultiCare">
+          <img src="src/logo-wellstar.png" alt="Wellstar Health System">
+          <img src="src/logo-intermountain.png" alt="Intermountain Healthcare">
+          <img src="src/logo-commonspirit.png" alt="CommonSpirit Health">
+        </div>
+      </div>
+    </section>
+
+    <section class="section benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Why VeeOne Health</span>
+          <h2 id="benefits-title">A virtual care platform built around your organization</h2>
+          <p>Give care teams a secure, dependable, and flexible foundation for telemedicine without forcing them into rigid workflows or expensive hardware.</p>
+        </div>
+        <div class="feature-grid feature-grid--six">
+          <article class="feature-card"><span class="icon">✓</span><h3>Secure</h3><p>HIPAA-compliant software, advanced encryption, and data-scrubbing safeguards support patient privacy.</p></article>
+          <article class="feature-card"><span class="icon">◎</span><h3>Reliable</h3><p>High-quality audio and video help clinicians stay connected and deliver care with confidence.</p></article>
+          <article class="feature-card"><span class="icon">↔</span><h3>Interoperable</h3><p>Integrates with existing EMR/EHR, PACS, diagnostic tools, and connected care workflows.</p></article>
+          <article class="feature-card"><span class="icon">↗</span><h3>Scalable</h3><p>Deploy across individual service lines, multiple facilities, or an entire healthcare system.</p></article>
+          <article class="feature-card"><span class="icon">▣</span><h3>Hardware Agnostic</h3><p>Use existing computers, tablets, mobile devices, cameras, and compatible peripherals.</p></article>
+          <article class="feature-card"><span class="icon">⚙</span><h3>Customizable</h3><p>Configure workflows around each client, specialty, use case, and operational requirement.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform-showcase" aria-labelledby="platform-title">
+      <div class="container split-panel">
+        <div class="split-panel__media">
+          <img src="src/_img1_raw.jpg" alt="Doctor providing a virtual care consultation">
+        </div>
+        <div class="split-panel__copy">
+          <span class="section-kicker">One platform. More possibilities.</span>
+          <h2 id="platform-title">Get more from your virtual care platform</h2>
+          <div class="stacked-features">
+            <div><h3>Built-in translation services</h3><p>Serve more patients with on-demand interpretation for 40+ languages, including ASL.</p></div>
+            <div><h3>Multi-party HD video</h3><p>Invite specialists, caregivers, family members, and care coordinators into secure consultations.</p></div>
+            <div><h3>Customized workflows</h3><p>Streamline administrative time with workflows optimized for your policies and clinical practices.</p></div>
+          </div>
+          <a href="#leadForm" class="button button--primary">Schedule a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section care-settings" aria-labelledby="settings-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Care without boundaries</span>
+          <h2 id="settings-title">From home to clinic to hospital, reach patients virtually everywhere</h2>
+        </div>
+        <div class="setting-grid setting-grid--illustrated">
+          <article class="setting-card setting-card--icon">
+            <div class="setting-card__symbol" aria-hidden="true">✚</div>
+            <span>Hospitals</span><h3>Virtual Acute Care</h3><p>Support ED, ICU, stroke, virtual nursing, e-sitter, and specialist-access programs.</p>
+            <ul><li>Virtual nursing</li><li>Specialty consults</li><li>Acute-care workflows</li></ul>
+          </article>
+          <article class="setting-card setting-card--icon">
+            <div class="setting-card__symbol" aria-hidden="true">⚕</div>
+            <span>Clinics</span><h3>Remote Clinics</h3><p>Extend physician and specialist access to community, rural, and distributed clinical locations.</p>
+            <ul><li>Remote specialty coverage</li><li>Provider collaboration</li><li>Integrated scheduling</li></ul>
+          </article>
+          <article class="setting-card setting-card--icon">
+            <div class="setting-card__symbol" aria-hidden="true">⌂</div>
+            <span>Home</span><h3>Connected Care at Home</h3><p>Enable remote patient monitoring, chronic care management, and hospital-at-home programs.</p>
+            <ul><li>Remote patient monitoring</li><li>Chronic care management</li><li>Hospital at home</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outcome-section" aria-labelledby="outcomes-title">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <span class="section-kicker">Clinical and operational impact</span>
+          <h2 id="outcomes-title">Better patient care. Proven financial results.</h2>
+          <p>VeeOne Health helps organizations expand access, streamline operations, and improve the economics of virtual care.</p>
+        </div>
+        <div class="results-grid">
+          <div><strong>38%</strong><span>Fewer hospital readmissions</span></div>
+          <div><strong>$16K+</strong><span>Net monthly profit potential</span></div>
+          <div><strong>25%</strong><span>Improvement in patient satisfaction</span></div>
+          <div><strong>1.5–2</strong><span>Day average reduction in length of stay</span></div>
+        </div>
+        <p class="results-note">Results vary by program, patient population, reimbursement structure, staffing model, and implementation.</p>
+      </div>
+    </section>
+
+    <section class="section outcomes-list" aria-label="Operational benefits">
+      <div class="container">
+        <div class="benefit-list-grid">
+          <div><strong>Decrease transfers</strong><span>Give teams instant access to board-certified virtual physicians.</span></div>
+          <div><strong>Increase patient volume</strong><span>Augment on-site staff with virtual specialists and flexible coverage.</span></div>
+          <div><strong>Bypass your call center</strong><span>Use integrated on-demand and scheduled consultation tools.</span></div>
+          <div><strong>Drive efficiencies</strong><span>Standardize clinical protocols and help teams do more with less.</span></div>
+          <div><strong>Reduce clinician burnout</strong><span>Provide an intuitive platform designed around real care workflows.</span></div>
+          <div><strong>Improve HCAHPS scores</strong><span>Create a more connected, responsive patient experience.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section integrations" aria-labelledby="integrations-title">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-kicker">Fits into your ecosystem</span>
+          <h2 id="integrations-title">VeeOne Health integrates with the tools you use every day</h2>
+        </div>
+        <div class="integration-cloud integration-cloud--logos">
+          <div><img src="src/logo-epic.png" alt="Epic"></div>
+          <div><img src="src/logo-cerner.png" alt="Cerner"></div>
+          <div><img src="src/logo-meditech.png" alt="MEDITECH"></div>
+          <div><img src="src/logo-ge.png" alt="GE Healthcare"></div>
+          <div><img src="src/logo-philips.png" alt="Philips"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section comparison" aria-labelledby="comparison-title">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-kicker">Built for advanced virtual care</span>
+          <h2 id="comparison-title">Everything you expect from a telehealth platform — plus more</h2>
+        </div>
+        <div class="comparison-table" role="table" aria-label="VeeOne Health capabilities">
+          <div class="comparison-row comparison-row--head"><span>Capability</span><strong>VeeOne Health</strong></div>
+          <div class="comparison-row"><span>Built-in interpretation services for 40+ languages</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>Provider collaboration, notes, and messaging</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>One-click camera control and compatible peripherals</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>Customizable clinical workflows</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>Automated call scheduling without a call center</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>HIPAA-enabled multi-party video</span><strong>✓</strong></div>
+          <div class="comparison-row"><span>Advanced security with two-factor authentication and encryption</span><strong>✓</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-support" aria-labelledby="support-title">
+      <div class="container split-panel split-panel--reverse">
+        <div class="split-panel__copy">
+          <span class="section-kicker">Workflow support</span>
+          <h2 id="support-title">Supporting your team before, during, and after every consult</h2>
+          <div class="check-list">
+            <p>Book remote physicians for on-demand and scheduled consultations.</p>
+            <p>Streamline patient intake with configurable forms and workflows.</p>
+            <p>Collaborate with care teams, caregivers, and family members through secure multi-party video.</p>
+            <p>View medical records, diagnostics, and notes without switching between disconnected tools.</p>
+            <p>Simplify encounter reporting through electronic medical record integration and HL7 standards.</p>
+          </div>
+        </div>
+        <div class="workflow-visual" aria-label="VeeOne Health virtual consultation on a connected device">
+          <div class="workflow-visual__glow" aria-hidden="true"></div>
+          <img src="src/platform-telehealth-device.png" alt="VeeOne Health virtual consultation displayed on a connected tablet">
+          <div class="workflow-visual__badges" aria-label="Platform workflow capabilities">
+            <span>On-demand consults</span><span>Multi-party video</span><span>Clinical integrations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intel-case" aria-labelledby="intel-title">
+      <div class="container intel-case__inner">
+        <img src="src/logo-intel.png" alt="Intel" class="intel-logo">
+        <div class="intel-case__copy">
+          <h2 id="intel-title">VeeOne Health and Intel partnered on one of the world’s largest telehealth installations</h2>
+          <p>Supporting hospitals with virtual care technology designed to extend reach, protect staff, and maintain continuity of care.</p>
+        </div>
+        <a href="#leadForm" class="button button--light">Discuss Your Use Case</a>
+      </div>
+    </section>
+
+    <section class="section final-cta" aria-labelledby="final-title">
+      <div class="container final-cta__inner">
+        <div>
+          <span class="section-kicker">Launch faster</span>
+          <h2 id="final-title">What if you could transform your virtual care program in less than 30 minutes?</h2>
+          <p>See how easy and affordable it can be to deliver secure, world-class virtual care.</p>
+        </div>
+        <a href="#leadForm" class="button button--primary button--large">Schedule a Demo</a>
+      </div>
+    </section>
+
+    <section class="citations" aria-label="Citations and disclaimers">
+      <div class="container citations__inner">
+        <details>
+          <summary>Citations, validation, and financial disclaimers</summary>
+          <div class="citations__content">
+            <p><a href="https://www.xealth.com/blog/q4-2023-customer-partner-highlights/" target="_blank" rel="noopener">Xealth Q4 2023 customer and partner highlights</a></p>
+            <p>Clark, D., Woods, J., Zhang, Y., Chandra, S., Summers, R. L., &amp; Jones, D. W. (2021). Home blood pressure telemonitoring with remote hypertension management in a rural and low-income population. Hypertension, 78(6), 1927–1929. <a href="https://doi.org/10.1161/hypertensionaha.121.18153" target="_blank" rel="noopener">DOI</a>.</p>
+            <p>Khoong, E. C., Commodore-Mensah, Y., Lyles, C. R., &amp; Fontil, V. (2022). Use of self-measured blood pressure monitoring to improve hypertension equity. Current Hypertension Reports, 24(12), 599–613. <a href="https://doi.org/10.1007/s11906-022-01218-0" target="_blank" rel="noopener">DOI</a>.</p>
+            <p><strong>Clinical validation:</strong> Program protocols and outcomes vary by implementation and patient population.</p>
+            <p><strong>Financial structuring:</strong> Illustrative financial models depend on reimbursement rates, staffing, enrollment, payer mix, local Medicare Administrative Contractor rules, and actual program utilization.</p>
+            <p><strong>Customer and integration references:</strong> All logos, customer references, integrations, and outcome claims should be confirmed and approved by VeeOne Health before publication.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="partners" aria-label="Partner logos">
+    <div class="container partners__inner">
+      <img src="src/logo-kore.png" alt="KORE" class="partners__logo">
+      <p>Secure, connected virtual care powered by trusted technology partners.</p>
+      <img src="src/logo-tmobile.png" alt="T-Mobile for Business" class="partners__logo">
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    'use strict';
+    var form=document.getElementById('leadForm');
+    if(!form)return;
+    function markError(input,msg){var g=input.closest('.form-group'),e=g.querySelector('.form-error');g.classList.add('is-error');if(msg)e.textContent=msg;}
+    function clearError(input){input.closest('.form-group').classList.remove('is-error');}
+    function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+    function isValidUrl(v){try{new URL(v);return true;}catch{return false;}}
+    var phone=form.querySelector('input[type="tel"]');
+    if(phone)phone.addEventListener('input',function(){this.value=this.value.replace(/[^\d\s\+\-\(\)]/g,'');});
+    form.addEventListener('input',function(e){if(e.target.tagName==='INPUT')clearError(e.target);});
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var valid=true;
+      form.querySelectorAll('input[required]').forEach(function(input){
+        var val=input.value.trim();
+        if(!val){markError(input);valid=false;return;}
+        if(input.type==='email'&&!isValidEmail(val)){markError(input,'Please enter a valid email address (must include @).');valid=false;return;}
+        if(input.type==='url'&&!isValidUrl(val)){markError(input,'Please enter a valid URL (e.g. https://example.com).');valid=false;return;}
+        clearError(input);
+      });
+      if(!valid)return;
+      // Post the lead to the shared Giovatto backend (routes by `source`).
+      var submitBtn=form.querySelector('button[type="submit"]');
+      var submitLabel=submitBtn.querySelector('.btn-label')||submitBtn;
+      var origText=submitLabel.textContent;
+      var submitErr=document.getElementById('submitError');
+      if(!submitErr){submitErr=document.createElement('p');submitErr.id='submitError';submitErr.setAttribute('role','alert');submitErr.style.cssText='display:none;color:#c0392b;margin-top:10px;';submitBtn.insertAdjacentElement('afterend',submitErr);}
+      submitErr.style.display='none';submitBtn.disabled=true;submitLabel.textContent='Submitting...';
+      var data={first_name:form.firstName.value.trim(),last_name:form.lastName.value.trim(),email:form.email.value.trim(),phone:form.phone.value.trim(),website:form.website.value.trim(),source:'veeonehealth',...(window.getKoreUtm?window.getKoreUtm():{})};
+      try{
+        try{data.recaptcha_token=await window.getKoreRecaptchaToken();}catch(_){}
+        var res=await fetch('https://or17ta3xjb.execute-api.us-east-1.amazonaws.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        if(!res.ok){var body=await res.json().catch(function(){return {};});throw new Error(body.error||'Submission failed');}
+        window.location.href='thank-you.html';
+      }catch(err){submitErr.textContent=err.message||'Something went wrong. Please try again.';submitErr.style.display='block';submitBtn.disabled=false;submitLabel.textContent=origText;}
+    });
+  })();
+  </script>
+
+<script>
+  // UTM attribution capture (added by mcs). Persists utm_* from the landing URL for this session and
+  // exposes window.getKoreUtm() for the form submit. Distinct from the backend `source` (landing page).
+  (function () {
+    var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    window.getKoreUtm = function () {
+      try { return JSON.parse(sessionStorage.getItem('koreUtm') || '{}'); } catch (e) { return {}; }
+    };
+    try {
+      var qs = new URLSearchParams(window.location.search), out = window.getKoreUtm(), found = false;
+      KEYS.forEach(function (k) { var v = qs.get(k); if (v) { out[k] = v.slice(0, 256); found = true; } });
+      if (found) sessionStorage.setItem('koreUtm', JSON.stringify(out));
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
