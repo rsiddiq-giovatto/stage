@@ -1,0 +1,14 @@
+ALL ROAD SAT LANDING PAGE REDESIGN
+
+Preserved without modification:
+- Form id, fields, names, validation, and required attributes
+- API submission endpoint and source value: allroadsat
+- reCAPTCHA integration
+- GTM container
+- KORE page-view beacon
+- UTM attribution
+- thank-you redirect and thank-you page content
+
+Updated:
+- Landing-page messaging, layout, CTA copy, use cases, partner section, and visual assets
+- styles.css cache version updated to 20260727
