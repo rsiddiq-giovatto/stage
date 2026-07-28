@@ -1,0 +1,6 @@
+All Road SAT V2 requested edits:
+- Moved four plan/Lone Worker bullets beneath the $50 plan box.
+- Changed footer to the original #F2F2F2 light background.
+- Removed the broken Lone Worker image section only.
+- Rebuilt the use-case area as six equal cards.
+- Existing form, tracking, reCAPTCHA, submission endpoint, and thank-you redirect preserved.
