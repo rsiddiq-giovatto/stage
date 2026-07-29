@@ -21,6 +21,19 @@
     window.KORE_RECAPTCHA_SITE_KEY='6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
     window.getKoreRecaptchaToken=function(){return new Promise(function(resolve,reject){if(typeof grecaptcha==='undefined'||typeof grecaptcha.execute!=='function'){reject(new Error('reCAPTCHA unavailable'));return;}grecaptcha.ready(function(){grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY,{action:'submit'}).then(resolve,reject);});});};
   </script>
+
+  <!-- KORE page-view beacon (required for deployment and analytics) -->
+  <script>
+    (function () {
+      var ep = "https://qrx4e1mvt0.execute-api.us-east-1.amazonaws.com/pageview?source=nevtech";
+      try {
+        navigator.sendBeacon
+          ? navigator.sendBeacon(ep)
+          : fetch(ep, { method: "POST", keepalive: true });
+      } catch (e) {}
+    })();
+  </script>
+
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8QQ43QV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -32,7 +45,7 @@
           <img src="src/NevTech_logo_reversed.png" alt="NevTech" class="hero__logo">
           <span class="eyebrow eyebrow--light">AI RECEPTIONIST + BUSINESS CONNECTIVITY</span>
           <h1>Never Miss Another Business Opportunity</h1>
-          <p class="hero__lead">NevTech’s AI Receptionist answers calls 24/7, qualifies leads, schedules appointments and routes customer requests while your team stays focused on the work.</p>
+          <p class="hero__lead">NevTech's AI Receptionist answers calls 24/7, qualifies leads, schedules appointments and routes customer requests while your team stays focused on the work.</p>
           <ul class="hero__checks">
             <li>24/7 professional call handling</li>
             <li>Lead qualification and appointment scheduling</li>
@@ -58,7 +71,7 @@
         <div class="hero__side">
           <div class="hero__photo-wrap">
             <img src="src/stock/1.jpg" alt="Business professional speaking with a customer by phone" class="hero__photo">
-            <div class="hero__photo-note">A professional first response—even when your team is busy.</div>
+            <div class="hero__photo-note">A professional first response&mdash;even when your team is busy.</div>
           </div>
 
           <div class="form-card" id="lead-form">
@@ -75,7 +88,7 @@
                 <div class="form-group"><label for="phone">Phone Number*</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required><span class="form-error">Please enter your phone number.</span></div>
               </div>
               <div class="form-group"><label for="website">Company Website*</label><input type="text" id="website" name="website" autocomplete="url" inputmode="url" placeholder="www.yourcompany.com" required><span class="form-error">Please enter a valid company website.</span></div>
-              <button type="submit" class="btn-cta"><span class="btn-label">Explore My Offer</span><span aria-hidden="true">→</span></button>
+              <button type="submit" class="btn-cta"><span class="btn-label">Explore My Offer</span><span aria-hidden="true">&rarr;</span></button>
               <p class="form-privacy">No obligation. Offer eligibility and service terms may vary.</p>
               <p id="submitError" class="form-submit-error" role="alert"></p>
             </form>
@@ -118,12 +131,12 @@
           <p>Configure the experience around your business hours, service area, appointment rules, escalation needs and customer questions.</p>
         </div>
         <div class="feature-grid">
-          <article class="feature-card"><span class="feature-card__icon">☎</span><h3>24/7 Call Answering</h3><p>Give callers a professional response during business hours, after hours and during high-volume periods.</p></article>
-          <article class="feature-card"><span class="feature-card__icon">✓</span><h3>Lead Qualification</h3><p>Collect the details your team needs before a prospective customer enters the next stage of your process.</p></article>
-          <article class="feature-card"><span class="feature-card__icon">▣</span><h3>Appointment Scheduling</h3><p>Book eligible appointments using configured availability and scheduling rules.</p></article>
-          <article class="feature-card"><span class="feature-card__icon">↗</span><h3>Routing & Escalation</h3><p>Transfer, notify or capture messages based on caller intent and your approved escalation path.</p></article>
-          <article class="feature-card"><span class="feature-card__icon">◎</span><h3>Common Question Handling</h3><p>Respond consistently to routine questions about services, hours, locations and next steps.</p></article>
-          <article class="feature-card"><span class="feature-card__icon">⌁</span><h3>Workflow Integration</h3><p>Connect call outcomes with supported CRM, scheduling and follow-up processes.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#9742;</span><h3>24/7 Call Answering</h3><p>Give callers a professional response during business hours, after hours and during high-volume periods.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#10003;</span><h3>Lead Qualification</h3><p>Collect the details your team needs before a prospective customer enters the next stage of your process.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#9635;</span><h3>Appointment Scheduling</h3><p>Book eligible appointments using configured availability and scheduling rules.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#8599;</span><h3>Routing & Escalation</h3><p>Transfer, notify or capture messages based on caller intent and your approved escalation path.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#9678;</span><h3>Common Question Handling</h3><p>Respond consistently to routine questions about services, hours, locations and next steps.</p></article>
+          <article class="feature-card"><span class="feature-card__icon">&#8961;</span><h3>Workflow Integration</h3><p>Connect call outcomes with supported CRM, scheduling and follow-up processes.</p></article>
         </div>
       </div>
     </section>
@@ -188,7 +201,7 @@
           <h2>Put a professional response behind every incoming call.</h2>
           <p>Explore six months of service with T-Mobile for Business activation, or start with 30 days through a complimentary NevTech consultation.</p>
         </div>
-        <a href="#lead-form" class="btn-cta btn-cta--light">Explore My NevTech Offer <span>→</span></a>
+        <a href="#lead-form" class="btn-cta btn-cta--light">Explore My NevTech Offer <span>&rarr;</span></a>
       </div>
     </section>
   </main>
