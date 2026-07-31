@@ -2,250 +2,183 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TPS5DFWQ');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TPS5DFWQ');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Grow your business with the T-Mobile Partner Program through KORE &mdash; a T-Mobile Pinnacle Primary Partner. Elite sales support, IoT expertise, and exclusive marketing resources.">
-  <title>TelecomVAR &mdash; Grow Your Business with the T-Mobile Partner Program</title>
+  <meta name="description" content="Become a KORE T-Mobile Partner and sell T-Mobile for Business wireless, business internet, and IoT solutions with onboarding, sales support, partner tools, and growth resources.">
+  <title>Become a KORE T-Mobile Partner | TelecomVAR</title>
   <link rel="stylesheet" href="https://use.typekit.net/ket6ihw.css">
   <link rel="stylesheet" href="vendor/fontawesome/css/fa-minimal.css">
-  <link rel="stylesheet" href="styles.css?v=20260702">
-  <!-- reCAPTCHA v3 (added by mcs) — invisible bot/spam gate. Token fetched on form submit and verified
-       server-side (siteverify + score) by the shared giovatto-kore-submissions Lambda. -->
+  <link rel="stylesheet" href="styles.css?v=20260731-tfb1">
   <script src="https://www.google.com/recaptcha/api.js?render=6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6"></script>
   <script>
-    window.KORE_RECAPTCHA_SITE_KEY = '6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
-    // Returns a Promise for a fresh per-submit token. Rejects if the reCAPTCHA script is unavailable; the
-    // submit handler treats a rejection as "no token" and lets the backend make the final call.
-    window.getKoreRecaptchaToken = function () {
-      return new Promise(function (resolve, reject) {
-        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') { reject(new Error('reCAPTCHA unavailable')); return; }
-        grecaptcha.ready(function () {
-          grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve, reject);
-        });
-      });
-    };
+    window.KORE_RECAPTCHA_SITE_KEY='6Lcq0UstAAAAAJpGaasfZeaKG2CG3AUybSDWXVn6';
+    window.getKoreRecaptchaToken=function(){return new Promise(function(resolve,reject){if(typeof grecaptcha==='undefined'||typeof grecaptcha.execute!=='function'){reject(new Error('reCAPTCHA unavailable'));return;}grecaptcha.ready(function(){grecaptcha.execute(window.KORE_RECAPTCHA_SITE_KEY,{action:'submit'}).then(resolve,reject);});});};
+  </script>
+  <!-- KORE page-view beacon (required for deployment and analytics) -->
+  <script>
+    (function(){var ep="https://qrx4e1mvt0.execute-api.us-east-1.amazonaws.com/pageview?source=telecomvar";try{navigator.sendBeacon?navigator.sendBeacon(ep):fetch(ep,{method:"POST",keepalive:true});}catch(e){}})();
   </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPS5DFWQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPS5DFWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="hero__layout">
-      <div class="hero__media" aria-hidden="true"></div>
-      <div class="hero__content">
-        <a href="/" class="logo" aria-label="KORE &mdash; home">
-          <img src="src/KORE-logo.png" alt="KORE" class="logo__img">
-        </a>
-        <span class="badge">T-MOBILE PINNACLE PRIMARY PARTNER</span>
-        <h1 class="hero__headline">Grow Your Business<br>with the T-Mobile<br>Partner Program</h1>
-        <p class="hero__sub">One local partner. One smarter way to run your business.</p>
-        <div class="form-card">
-          <h2 class="form-card__title">Become a KORE T-Mobile Partner</h2>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <img src="src/KORE-logo.png" alt="KORE" class="hero__logo">
+          <span class="eyebrow">T-MOBILE FOR BUSINESS PARTNER PROGRAM</span>
+          <h1>Grow Your Business with the T-Mobile Partner Program</h1>
+          <p class="hero__lead">Sell T-Mobile for Business wireless, business internet, and IoT solutions through KORE — with onboarding, sales support, partner tools, and expertise designed to help you create recurring revenue.</p>
+          <div class="hero__audience">Built for MSPs, VARs, telecom agents, consultants, system integrators, distributors, and technology solution providers.</div>
+          <div class="hero__badges">
+            <span>America’s largest and fastest 5G network for business</span>
+            <span>KORE Pinnacle Primary Partner support</span>
+            <span>Wireless + Business Internet + IoT</span>
+          </div>
+        </div>
+
+        <aside class="form-card" id="partner-form">
+          <img src="src/tfb-pinnacle-partner.webp" alt="T-Mobile for Business Pinnacle Partner" class="form-card__logo">
+          <h2>Become a KORE T-Mobile Partner</h2>
+          <p>Tell us about your company. A KORE Business Development Manager will review your information and contact you about eligibility and next steps.</p>
           <form id="leadForm" novalidate>
             <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name<span aria-hidden="true">*</span></label>
-                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
-                <span class="form-error" role="alert">Please enter your first name.</span>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name<span aria-hidden="true">*</span></label>
-                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
-                <span class="form-error" role="alert">Please enter your last name.</span>
-              </div>
+              <div class="form-group"><label for="firstName">First Name*</label><input type="text" id="firstName" name="firstName" autocomplete="given-name" required><span class="form-error">Please enter your first name.</span></div>
+              <div class="form-group"><label for="lastName">Last Name*</label><input type="text" id="lastName" name="lastName" autocomplete="family-name" required><span class="form-error">Please enter your last name.</span></div>
             </div>
-            <div class="form-row form-row--full">
-              <div class="form-group">
-                <label for="email">Email Address<span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-                <span class="form-error" role="alert">Please enter a valid email address.</span>
-              </div>
-            </div>
-            <div class="form-row form-row--full">
-              <div class="form-group">
-                <label for="website">Company Website<span aria-hidden="true">*</span></label>
-                <input type="url" id="website" name="website" autocomplete="url" placeholder="https://www.example.com" required>
-                <span class="form-error" role="alert">Please enter a valid URL (e.g. https://www.example.com).</span>
-              </div>
-            </div>
-            <button type="submit" class="btn-cta"><i class="fa-regular fa-lock" aria-hidden="true"></i> Become a KORE T-Mobile Partner</button>
+            <div class="form-group"><label for="email">Business Email*</label><input type="email" id="email" name="email" autocomplete="email" required><span class="form-error">Please enter a valid email address.</span></div>
+            <div class="form-group"><label for="website">Company Website*</label><input type="url" id="website" name="website" autocomplete="url" placeholder="https://www.example.com" required><span class="form-error">Please enter a valid company website.</span></div>
+            <button type="submit" class="btn-cta"><span class="btn-label">Become a KORE T-Mobile Partner</span></button>
           </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="pinnacle-strip">
+      <div class="container pinnacle-strip__inner">
+        <div class="pinnacle-chip">PINNACLE<br>PRIMARY<br>PARTNER</div>
+        <div><span>T-MOBILE’S HIGHEST PARTNER TIER</span><p>T-Mobile has recognized KORE as one of a select few Pinnacle Primary Partners. You gain more than access — you gain experienced support, resources, and a partner built to help you win.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="who-for">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow eyebrow--dark">WHO THE PROGRAM IS FOR</span><h2>Built for technology and telecom businesses ready to grow</h2><p>The program is designed for companies that want to add T-Mobile for Business solutions to their portfolio and create new recurring revenue opportunities.</p></div>
+        <div class="audience-grid">
+          <article><h3>Managed Service Providers</h3><p>Add wireless, business internet, and IoT to existing managed-service relationships.</p></article>
+          <article><h3>Value-Added Resellers</h3><p>Expand your portfolio with high-demand connectivity solutions for business customers.</p></article>
+          <article><h3>Telecom Agents &amp; Consultants</h3><p>Offer broader solutions while receiving deal support, training, and commission guidance.</p></article>
+          <article><h3>System Integrators</h3><p>Combine T-Mobile connectivity with cloud, hardware, security, and IoT deployments.</p></article>
+          <article><h3>Distributors</h3><p>Add scalable wireless and connected-device solutions to your channel ecosystem.</p></article>
+          <article><h3>Technology Solution Providers</h3><p>Create differentiated offers with T-Mobile connectivity and KORE’s IoT expertise.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROMO BANNER -->
-  <section class="promo-banner" aria-label="Pinnacle Partner status">
-    <div class="container promo-banner__inner">
-      <div class="promo-badge">PINNACLE <br>PRIMARY <br>PARTNER </div>
-      <div class="promo-text">
-        <small class="promo-label">T-Mobile's Highest Partner Tier</small>
-        T-Mobile has recognized KORE as one of a select few Pinnacle Primary Partners. <strong>We don't just give you access &mdash; we give you the advantage to win.</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" aria-label="About the T-Mobile Partner Program">
-    <div class="container about__inner">
-      <div class="about__top">
-        <h2 class="about__heading">Your Customers Need Solutions That Work From Anywhere</h2>
-        <div class="about__pinnacle">
-          <p>Our commitment to best-in-class support is why T-Mobile has recognized KORE as one of a select few <strong>Pinnacle Primary Partners</strong> &mdash; their highest partner tier. When you partner with KORE, you partner with a leader built to help you win.</p>
+    <section class="section section--alt" id="why-kore">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow eyebrow--dark">THE KORE ADVANTAGE</span><h2>Why Partner with KORE for T-Mobile?</h2><p>Everything you need to sell more, earn more, and serve your customers better.</p></div>
+        <div class="benefits-grid">
+          <article><h3>Elite Sales Support</h3><p>Dedicated Business Development Directors help you navigate opportunities, build better solutions, and move deals forward.</p></article>
+          <article><h3>KORE’s IoT Expertise</h3><p>Go beyond simple connectivity with connected-device strategy, IoT solutions, and industry expertise.</p></article>
+          <article><h3>The Pinnacle Advantage</h3><p>Work with one of T-Mobile’s highest-tier partners and gain access to experienced support and enablement resources.</p></article>
+          <article><h3>Exclusive Partner Resources</h3><p>Use the KORE Channels Partner Portal for sales tools, training, collateral, and program resources.</p></article>
+          <article><h3>Strategic Marketing Funds</h3><p>Get guidance on leveraging eligible T-Mobile Marketing Development Funds to create demand and increase activations.</p></article>
+          <article><h3>Commission Support</h3><p>Receive guidance on eligible opportunities, deal registration, and compensation structures based on current programs.</p></article>
         </div>
       </div>
-      <div class="about__cols">
-        <div class="about__left">
-          <p class="about__subheading">With T-Mobile</p>
-          <p class="about__desc">You can offer your customers a fast, reliable solution that can be deployed anywhere on America's largest 5G network &mdash; giving them the connectivity they need to stay productive, competitive, and always on.</p>
-        </div>
-        <div class="about__right">
-          <p class="about__subheading">With KORE</p>
-          <p class="about__desc">You get the elite support and deep expertise to turn powerful T-Mobile connectivity into your ultimate competitive advantage. From onboarding and commissions to IoT strategy and marketing funds &mdash; KORE is with you at every step.</p>
-        </div>
-        <div class="about__col about__col--contact">
-          <p class="about__contact-title">Want to know more about us?</p>
-          <a href="mailto:rrouillard@korewireless.com" class="about__contact-row">
-            <span class="about__contact-icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
-            rrouillard@korewireless.com
-          </a>
-          <a href="tel:+17818833330" class="about__contact-row">
-            <span class="about__contact-icon" aria-hidden="true"><i class="fa-regular fa-phone"></i></span>
-            (781) 883-3330
-          </a>
-          <a href="https://www.korewireless.com/t-mobile-for-business-partner-program/" class="about__contact-row" target="_blank" rel="noopener">
-            <span class="about__contact-icon" aria-hidden="true"><i class="fa-regular fa-globe"></i></span>
-            korewireless.com/t-mobile-for-business-partner-program
-          </a>
+    </section>
+
+    <section class="section" id="what-you-sell">
+      <div class="container split-intro">
+        <div class="section-heading"><span class="eyebrow eyebrow--dark">WHAT YOU CAN SELL</span><h2>Build a stronger portfolio with T-Mobile for Business</h2><p>Serve customers across wireless, internet, and IoT use cases through one partner relationship.</p></div>
+        <div class="sell-grid">
+          <article><h3>Business Wireless</h3><p>Offer business phone plans, mobile connectivity, and connected workforce solutions on America’s largest and fastest 5G network for business.</p></article>
+          <article><h3>Business Internet</h3><p>Support primary connectivity, backup internet, temporary sites, rapid deployments, and distributed locations.</p></article>
+          <article><h3>IoT Connectivity &amp; Solutions</h3><p>Expand into fleet management, asset tracking, connected healthcare, industrial IoT, smart cities, and remote monitoring.</p></article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BENEFITS -->
-  <section class="benefits" aria-label="Why partner with KORE for T-Mobile">
-    <div class="container">
-      <h2 class="benefits__heading">Why Partner with KORE for T-Mobile?</h2>
-      <p class="benefits__sub">Everything you need to sell more, earn more, and serve your customers better.</p>
-      <div class="benefits__grid">
-
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <img src="src/Kore_Icon_group.svg" alt="" aria-hidden="true">
-          </div>
-          <p class="benefit-card__title">Elite Sales Support</p>
-          <p class="benefit-card__desc">Our dedicated Business Development Directors help you build better solutions, navigate the sales process, and win more deals &mdash; with dedicated Marketing, Commissions, and Onboarding support at Pinnacle level.</p>
+    <section class="section metrics-section">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow eyebrow--light">KORE SCALE</span><h2>Global expertise behind every partner opportunity</h2></div>
+        <div class="metrics-grid">
+          <div><strong>21M+</strong><span>connected devices across the globe</span></div>
+          <div><strong>200+</strong><span>countries covered</span></div>
+          <div><strong>20+</strong><span>years of carrier relationships</span></div>
         </div>
-
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <img src="src/Kore_Icon_wifi.svg" alt="" aria-hidden="true">
-          </div>
-          <p class="benefit-card__title">KORE's IoT Expertise</p>
-          <p class="benefit-card__desc">Go beyond simple connectivity. Tap into KORE's deep knowledge of IoT and connected solutions to build more compelling customer offers and unlock new revenue opportunities across industries.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <img src="src/Kore_Icon_verifiied.svg" alt="" aria-hidden="true">
-          </div>
-          <p class="benefit-card__title">The Pinnacle Advantage</p>
-          <p class="benefit-card__desc">As one of a select group of T-Mobile Pinnacle Primary Partners, we provide unparalleled access to resources and support. You are partnering with a leader positioned to help you sell the best.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <img src="src/Kore_Icon_transfer.svg" alt="" aria-hidden="true">
-          </div>
-          <p class="benefit-card__title">Exclusive Partner Resources</p>
-          <p class="benefit-card__desc">Access everything you need to succeed through our unified partner portal &mdash; including pre-built marketing resources, sales collateral, and partner education to accelerate your growth.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <img src="src/Kore_Icon_currency.svg" alt="" aria-hidden="true">
-          </div>
-          <p class="benefit-card__title">Strategic Marketing Funds</p>
-          <p class="benefit-card__desc">Gain access to T-Mobile's Marketing Development Funds (MDF). Our team works hand-in-hand with you to strategize ways to leverage these funds and drive more partner-generated activations.</p>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PARTNERS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow eyebrow--dark">HOW IT WORKS</span><h2>Become a T-Mobile Partner in 3 Steps</h2></div>
+        <div class="steps-grid">
+          <article><span>01</span><h3>Become a Partner</h3><p>Submit the inquiry form and connect with a KORE Business Development Manager.</p></article>
+          <article><span>02</span><h3>Get Onboarded</h3><p>Complete required onboarding and gain access to the KORE Channels Partner Portal.</p></article>
+          <article><span>03</span><h3>Start Selling</h3><p>Register opportunities and sell T-Mobile for Business wireless, business internet, and IoT solutions with KORE support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="build-scale">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow eyebrow--dark">BUILD. DEPLOY. MANAGE. SCALE.</span><h2>A partner model built for execution</h2><p>KORE helps you move from opportunity to deployment and long-term growth.</p></div>
+        <div class="lifecycle-grid">
+          <article><h3>Build</h3><p>Architect the right wireless, internet, or IoT solution for your customer.</p></article>
+          <article><h3>Deploy</h3><p>Select, source, test, activate, and deploy connected devices and services.</p></article>
+          <article><h3>Manage</h3><p>Monitor, control, and optimize connected fleets through platforms and support.</p></article>
+          <article><h3>Scale</h3><p>Expand deployments across more users, sites, devices, and geographies.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner"><div><h2>Ready to add T-Mobile for Business to your portfolio?</h2><p>Connect with KORE to learn about eligibility, onboarding, partner resources, and available revenue opportunities.</p></div><a href="#partner-form" class="btn-cta btn-cta--light">Become a KORE T-Mobile Partner</a></div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow eyebrow--dark">FREQUENTLY ASKED QUESTIONS</span><h2>Everything you need to know about the T-Mobile Partner Program through KORE</h2></div>
+        <div class="faq-list">
+          <details open><summary>What is the T-Mobile Partner Program?</summary><p>The T-Mobile Partner Program allows MSPs, VARs, telecom agents, system integrators, and solution providers to sell T-Mobile for Business solutions, including wireless connectivity, Business Internet, and IoT services. Partners work through authorized primary partners like KORE to access tools, support, and commission opportunities.</p></details>
+          <details><summary>How do I become a T-Mobile partner?</summary><p>You typically work through an authorized primary partner such as KORE. The process includes submitting a partner inquiry, completing onboarding requirements, gaining access to sales and marketing resources, and registering opportunities through the partner program.</p></details>
+          <details><summary>What is a T-Mobile sub-agent?</summary><p>A T-Mobile sub-agent sells T-Mobile for Business solutions through a primary partner such as KORE. Sub-agents receive access to products, commissions, training, and sales support while leveraging the infrastructure and expertise of an established partner organization.</p></details>
+          <details><summary>What is a T-Mobile Pinnacle Primary Partner?</summary><p>Pinnacle Primary Partner is one of T-Mobile’s highest partner designations. Working with a Pinnacle Primary Partner like KORE provides access to experienced support, enablement resources, and deeper knowledge of T-Mobile for Business solutions.</p></details>
+          <details><summary>Can I sell T-Mobile Business Internet through KORE?</summary><p>Yes. Partners can offer T-Mobile Business Internet for businesses seeking primary connectivity, backup internet, temporary connectivity, or rapid deployment options. KORE helps partners identify opportunities, position solutions, and support deployments.</p></details>
+          <details><summary>Can I sell IoT solutions in addition to wireless connectivity?</summary><p>Yes. KORE helps partners expand beyond traditional wireless offerings by combining T-Mobile connectivity with IoT solutions such as fleet management, asset tracking, connected healthcare, industrial IoT, smart cities, and remote monitoring.</p></details>
+          <details><summary>What types of businesses can join the T-Mobile Partner Program?</summary><p>The program is designed for MSPs, VARs, telecom agents, distributors, consultants, system integrators, and other technology solution providers that want to add wireless, internet, or IoT services to their portfolio.</p></details>
+          <details><summary>What support does KORE provide to T-Mobile partners?</summary><p>KORE provides business development support, onboarding assistance, deal registration guidance, training, marketing resources, commission support, and access to the KORE Channels Partner Portal. Partners also gain access to IoT expertise that can help expand customer opportunities.</p></details>
+          <details><summary>What are the benefits of working with KORE as a T-Mobile partner?</summary><p>Partners gain access to T-Mobile for Business solutions alongside KORE’s experience in connectivity and IoT. Benefits include enablement, sales support, marketing resources, deal registration assistance, and the ability to offer wireless and IoT solutions through a single relationship.</p></details>
+          <details><summary>What are the requirements to join the T-Mobile Partner Program through KORE?</summary><p>Most partners need a valid business entity, tax ID, company website, business email domain, and business address. Additional onboarding requirements may vary based on your organization and the solutions you plan to offer.</p></details>
+          <details><summary>Do I need IoT experience to become a T-Mobile partner?</summary><p>No. Many partners begin with wireless or Business Internet and later expand into IoT. KORE provides guidance, training, and solution expertise to help partners identify and grow IoT opportunities over time.</p></details>
+          <details><summary>How do commissions work for T-Mobile partners?</summary><p>Partners may qualify for commissions on eligible T-Mobile for Business solutions, including wireless and Business Internet services. Compensation structures vary by partner model and current programs. A KORE Business Development Manager can provide details specific to your business.</p></details>
+          <details><summary>Can I become a T-Mobile reseller?</summary><p>Yes. Many organizations participate in the T-Mobile ecosystem as agents, sub-agents, resellers, or solution providers through authorized primary partners like KORE.</p></details>
+          <details><summary>What is the difference between a T-Mobile agent and a T-Mobile sub-agent?</summary><p>A primary agent maintains a direct relationship with T-Mobile and supports partner enablement. A sub-agent works through a primary partner and gains access to T-Mobile solutions, resources, and commissions through that relationship.</p></details>
+          <details><summary>Can MSPs sell T-Mobile services?</summary><p>Yes. Managed service providers can add T-Mobile wireless, Business Internet, and IoT solutions to their portfolio to create recurring revenue opportunities and support customer connectivity needs.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PRESERVED EXACTLY -->
   <footer class="partners" aria-label="Partner logos">
     <div class="container partners__inner">
       <img src="src/KORE-logo.png" alt="KORE" class="partners__logo">
-      <img src="src/tmobile.png" alt="T-Mobile for Business &mdash; Registered Partner" class="partners__logo">
+      <img src="src/tmobile.png" alt="T-Mobile for Business — Registered Partner" class="partners__logo">
     </div>
   </footer>
 
   <script>
-  (function(){
-    'use strict';
-    var form=document.getElementById('leadForm');
-    if(!form)return;
-    function markError(input,msg){var g=input.closest('.form-group'),e=g.querySelector('.form-error');g.classList.add('is-error');if(msg)e.textContent=msg;}
-    function clearError(input){input.closest('.form-group').classList.remove('is-error');}
-    function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
-    function isValidURL(v){try{var u=new URL(v);return u.protocol==='http:'||u.protocol==='https:';}catch(e){return false;}}
-    form.addEventListener('input',function(e){if(e.target.tagName==='INPUT')clearError(e.target);});
-    form.addEventListener('submit',async function(e){
-      e.preventDefault();
-      var valid=true;
-      form.querySelectorAll('input[required]').forEach(function(input){
-        var val=input.value.trim();
-        if(!val){markError(input);valid=false;return;}
-        if(input.type==='email'&&!isValidEmail(val)){markError(input,'Please enter a valid email address (must include @).');valid=false;return;}
-        clearError(input);
-      });
-      var websiteInput=form.querySelector('#website');
-      if(websiteInput&&websiteInput.value.trim()&&!isValidURL(websiteInput.value.trim())){markError(websiteInput);valid=false;}
-      if(!valid)return;
-      var submitBtn=form.querySelector('button[type="submit"]');
-      var submitLabel=submitBtn.querySelector('.btn-label')||submitBtn;
-      var origText=submitLabel.textContent;
-      var submitErr=document.getElementById('submitError');
-      if(!submitErr){submitErr=document.createElement('p');submitErr.id='submitError';submitErr.setAttribute('role','alert');submitErr.style.cssText='display:none;color:#c0392b;margin-top:10px;';submitBtn.insertAdjacentElement('afterend',submitErr);}
-      submitErr.style.display='none';submitBtn.disabled=true;submitLabel.textContent='Submitting...';
-      var websiteVal=websiteInput?websiteInput.value.trim():'';
-      var data={first_name:form.firstName.value.trim(),last_name:form.lastName.value.trim(),email:form.email.value.trim(),website:websiteVal,source:'telecomvar',...(window.getKoreUtm?window.getKoreUtm():{})};
-      try{
-        try{data.recaptcha_token=await window.getKoreRecaptchaToken();}catch(_){}
-        var res=await fetch('https://or17ta3xjb.execute-api.us-east-1.amazonaws.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-        if(!res.ok){var body=await res.json().catch(function(){return {};});throw new Error(body.error||'Submission failed');}
-        window.location.href='thank-you.html';
-      }catch(err){submitErr.textContent=err.message||'Something went wrong. Please try again.';submitErr.style.display='block';submitBtn.disabled=false;submitLabel.textContent=origText;}
-    });
-  })();
+  (function(){'use strict';var form=document.getElementById('leadForm');if(!form)return;function markError(input,msg){var g=input.closest('.form-group'),e=g.querySelector('.form-error');g.classList.add('is-error');if(msg)e.textContent=msg;}function clearError(input){input.closest('.form-group').classList.remove('is-error');}function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}function isValidURL(v){try{var u=new URL(v);return u.protocol==='http:'||u.protocol==='https:';}catch(e){return false;}}form.addEventListener('input',function(e){if(e.target.tagName==='INPUT')clearError(e.target);});form.addEventListener('submit',async function(e){e.preventDefault();var valid=true;form.querySelectorAll('input[required]').forEach(function(input){var val=input.value.trim();if(!val){markError(input);valid=false;return;}if(input.type==='email'&&!isValidEmail(val)){markError(input,'Please enter a valid business email.');valid=false;return;}clearError(input);});var websiteInput=form.querySelector('#website');if(websiteInput&&websiteInput.value.trim()&&!isValidURL(websiteInput.value.trim())){markError(websiteInput);valid=false;}if(!valid)return;var submitBtn=form.querySelector('button[type="submit"]');var submitLabel=submitBtn.querySelector('.btn-label')||submitBtn;var origText=submitLabel.textContent;var submitErr=document.getElementById('submitError');if(!submitErr){submitErr=document.createElement('p');submitErr.id='submitError';submitErr.setAttribute('role','alert');submitErr.style.cssText='display:none;color:#ffb6b6;margin-top:10px;';submitBtn.insertAdjacentElement('afterend',submitErr);}submitErr.style.display='none';submitBtn.disabled=true;submitLabel.textContent='Submitting...';var data={first_name:form.firstName.value.trim(),last_name:form.lastName.value.trim(),email:form.email.value.trim(),website:websiteInput.value.trim(),source:'telecomvar',...(window.getKoreUtm?window.getKoreUtm():{})};try{try{data.recaptcha_token=await window.getKoreRecaptchaToken();}catch(_){}var res=await fetch('https://or17ta3xjb.execute-api.us-east-1.amazonaws.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(!res.ok){var body=await res.json().catch(function(){return {};});throw new Error(body.error||'Submission failed');}window.location.href='thank-you.html';}catch(err){submitErr.textContent=err.message||'Something went wrong. Please try again.';submitErr.style.display='block';submitBtn.disabled=false;submitLabel.textContent=origText;}});})();
   </script>
-<script>
-  // UTM attribution capture (added by mcs). Persists utm_* from the landing URL for this session and
-  // exposes window.getKoreUtm() for the form submit. Distinct from the backend `source` (landing page).
-  (function () {
-    var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-    window.getKoreUtm = function () {
-      try { return JSON.parse(sessionStorage.getItem('koreUtm') || '{}'); } catch (e) { return {}; }
-    };
-    try {
-      var qs = new URLSearchParams(window.location.search), out = window.getKoreUtm(), found = false;
-      KEYS.forEach(function (k) { var v = qs.get(k); if (v) { out[k] = v.slice(0, 256); found = true; } });
-      if (found) sessionStorage.setItem('koreUtm', JSON.stringify(out));
-    } catch (e) {}
-  })();
-</script>
+  <script>(function(){var KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];window.getKoreUtm=function(){try{return JSON.parse(sessionStorage.getItem('koreUtm')||'{}');}catch(e){return {};}};try{var qs=new URLSearchParams(window.location.search),out=window.getKoreUtm(),found=false;KEYS.forEach(function(k){var v=qs.get(k);if(v){out[k]=v.slice(0,256);found=true;}});if(found)sessionStorage.setItem('koreUtm',JSON.stringify(out));}catch(e){}})();</script>
 </body>
 </html>
